@@ -1,5 +1,5 @@
 import asyncio
-
+import get_data as gd
 import websockets
 
 # here we'll store all active connections to use for sending periodic messages
@@ -19,7 +19,7 @@ def connection_handler(connection, path):
             print("Last Day call")
             for connection in connections:
                 print(connection)
-                yield from connection.send('LastDay')  # send message to each connected clie$
+                yield from connection.send(gd.LastDay(0))  # send message to each connected clie$
                 print('< {}'.format(msg))    # send message to each connected client
             connections.pop(1)
         elif msg.startswith('RangeData'):
