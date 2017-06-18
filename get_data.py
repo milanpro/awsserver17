@@ -17,3 +17,4 @@ def LastDay(day):
         output = output + "Du solltest dich etwas mehr bewegen."
     else:
         output = output + "Du hast dich heute viel bewegt!"
+    return output
