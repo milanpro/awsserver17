@@ -15,11 +15,12 @@ def connection_handler(connection, path):
             print("Message leer")
             connections.remove(connection)  # remove connection from pool, when client disco$
             break
-        elif msg == 'LastDay':
+        elif msg.startswith('LastDay'):
             print("Last Day call")
             for connection in connections:
                 print(connection)
-                yield from connection.send(gd.LastDay(0))  # send message to each connected clie$
+                msg = msg[7:]
+                yield from connection.send(gd.LastDay(msg))  # send message to each connected clie$
                 print('< {}'.format(msg))    # send message to each connected client
             connections.pop(1)
         elif msg.startswith('RangeData'):
