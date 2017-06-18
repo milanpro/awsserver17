@@ -13,8 +13,10 @@ def LastDay(day):
     output = "Deine Herzfrequenz betrug heute im Durchschnitt "+avg_hr+" bpm,"\
                 "du bist "+steps+" Schritte gelaufen, hast "+slp_du+" Stunden geschlafen"\
                 "und "+cal+" Kalorien konsumiert."
+    """
     if(int(steps)<=2000):
         output = output + "Du solltest dich etwas mehr bewegen."
     else:
         output = output + "Du hast dich heute viel bewegt!"
+    """
     return output
