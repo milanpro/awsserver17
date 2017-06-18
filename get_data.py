@@ -11,10 +11,10 @@ def LastDay(day):
     cal = str(df.ix[0, 'calories'])
     steps = str(df.ix[0, 'steps'])
     output = "Deine Herzfrequenz betrug heute im Durchschnitt "+avg_hr+" bpm,"\
-                "du bist "+steps+" Schritte gelaufen, hast "+slp_du+" Stunden geschlafen"\
+                "du bist "+steps+" Schritte gelaufen, hast "+slp_du+" Stunden geschlafen "\
                 "und "+cal+" Kalorien konsumiert."
     if(int(steps)<=2000):
-        output = output + "Du solltest dich etwas mehr bewegen."
+        output = output + " Du solltest dich etwas mehr bewegen."
     else:
-        output = output + "Du hast dich heute viel bewegt!"
+        output = output + " Du hast dich heute viel bewegt!"
     return output
