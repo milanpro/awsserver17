@@ -21,7 +21,7 @@ def connection_handler(connection, path):
             i = 0
             for connection in connections:
                 if i == 0:
-                    i++
+                    i=i+1
                 else:
                     msg = gd.LastDay(msg)
                 print(connection)
