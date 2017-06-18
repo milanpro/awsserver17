@@ -19,10 +19,6 @@ class database_connector:
     def query(self, query):
         self.cursor.execute(query)
 
-    def __del__(self):
-        self.cursor.close()
-        self.cnx.close()
-
 if __name__ =="__main__":
     mydb = database_connector()
     mydb.query("CREATE TABLE IF NOT EXISTS `newtable`"
