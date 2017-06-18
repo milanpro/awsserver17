@@ -1,4 +1,4 @@
-import database_connector
+from database_connector import database_connector
 import pandas as pd
 
 def LastDay(day):
