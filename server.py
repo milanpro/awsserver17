@@ -19,7 +19,7 @@ def connection_handler(connection, path):
             print("Last Day call")
             for connection in connections:
                 print(connection)
-                msg = msg[7:]
+                msg = msg[8:]
                 yield from connection.send(gd.LastDay(msg))  # send message to each connected clie$
                 print('< {}'.format(msg))    # send message to each connected client
             connections.pop(1)
