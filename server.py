@@ -17,10 +17,10 @@ def connection_handler(connection, path):
             break
         elif msg.startswith('LastDay'):
             print("Last Day call")
+            msg = msg[8:]
+            msg = gd.LastDay(msg)
             for connection in connections:
                 print(connection)
-                msg = msg[8:]
-                msg = gd.LastDay(msg)
                 yield from connection.send(msg)  # send message to each connected clie$
                 print('< {}'.format(msg))    # send message to each connected client
             connections.pop(1)

@@ -3,7 +3,6 @@ import pandas as pd
 
 def LastDay(day):
     db = database_connector()
-    print(day)
     df = pd.read_sql("SELECT avg_heart_rate, sleep_duration, sleep_interrupts, coffein, calories, steps FROM data WHERE day = "+str(69-int(day))+";", db.engine)
     avg_hr = str(df.ix[0, 'avg_heart_rate'])
     slp_du = str(df.ix[0, 'sleep_duration'])
